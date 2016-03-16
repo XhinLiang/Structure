@@ -33,6 +33,15 @@ Basic Data Structures and Algorithm in **PURE C**.
 - More in DP
 - More and more
 
+### Build
+*This Project is base on CMake 2.8, you have to install CMake first*
+
+``` bash
+mkdir exec
+cmake .
+make
+```
+
 ### License
 
     Copyright 2016 XhinLiang
