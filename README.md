@@ -1,30 +1,39 @@
 # Structure
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-Data Structures and Algorithm Analysis in C
 
+Basic Data Structures and Algorithm in **PURE C**.
+
+### Finished
 #### Array
-- array
-- kmp
+- [Array](https://github.com/XhinLiang/Structure/blob/master/array/array.c)
+- [KMP](https://github.com/XhinLiang/Structure/blob/master/array/kmp.c)
 
 #### Graph
-- graph
-- dijkstra
+- [Graph](https://github.com/XhinLiang/Structure/blob/master/graph/graph.c)
+- [Dijkstra](https://github.com/XhinLiang/Structure/blob/master/graph/dijkstra.c)
 
 #### Sort
-- heap_sort
-- insert_sort
-- merge_sort
-- quick_sort
-- select_sort
-_ shell_sort
+- [Heap](https://github.com/XhinLiang/Structure/blob/master/sort/heap_sort.c)
+- [Insert](https://github.com/XhinLiang/Structure/blob/master/sort/insert_sort.c)
+- [Merge](https://github.com/XhinLiang/Structure/blob/master/sort/merge_sort.c)
+- [Quick](https://github.com/XhinLiang/Structure/blob/master/sort/quick_sort.c)
+- [Select](https://github.com/XhinLiang/Structure/blob/master/sort/select_sort.c)
+- [Shell](https://github.com/XhinLiang/Structure/blob/master/sort/shell_sort.c)
 
 #### util
-- common
-- heap
-- queue
-- stack
+- [Common](https://github.com/XhinLiang/Structure/blob/master/util/common.c)
+- [Heap](https://github.com/XhinLiang/Structure/blob/master/util/heap.c)
+- [Queue](https://github.com/XhinLiang/Structure/blob/master/util/queue.c)
+- [Stack](https://github.com/XhinLiang/Structure/blob/master/util/Stack.c)
 
-## License
+### TODO
+- Floyd
+- Tree and more
+- Prime Number
+- More in DP
+- More and more
+
+### License
 
     Copyright 2016 XhinLiang
 
