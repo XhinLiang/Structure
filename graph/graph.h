@@ -19,6 +19,6 @@ typedef struct {
     int size;
 } Graph;
 
-Graph* get_Graph(const int node_sum);
+Graph* get_Graph(const int length);
 
 #endif

@@ -20,8 +20,8 @@ typedef struct {
 
 Stack *get_Stack();
 
-int pop(Stack *stack);
+int stack_pop(Stack *stack);
 
-void push(Stack *stack, int data);
+void stack_push(Stack *stack, int data);
 
 #endif //GRAPH_STACK_H

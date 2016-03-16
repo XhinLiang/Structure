@@ -11,7 +11,7 @@ Stack *get_Stack() {
     return stack;
 }
 
-int pop(Stack *stack) {
+int stack_pop(Stack *stack) {
     int result;
     Stack_node *now = stack->node;
     Stack_node *forward = now;
@@ -30,7 +30,7 @@ int pop(Stack *stack) {
     return result;
 }
 
-void push(Stack *stack, int data) {
+void stack_push(Stack *stack, int data) {
     Stack_node *push_node = (Stack_node *) malloc(sizeof(Stack_node));
     push_node->data = data;;
     push_node->next = NULL;

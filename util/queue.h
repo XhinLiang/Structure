@@ -19,8 +19,8 @@ typedef struct {
 
 Queue *get_Queue();
 
-int dequeue(Queue *queue);
+int queue_dequeue(Queue *queue);
 
-void enqueue(Queue *queue, int data);
+void queue_enqueue(Queue *queue, int data);
 
 #endif //GRAPH_QUEUE_H

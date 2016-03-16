@@ -5,12 +5,12 @@
 #include <stdlib.h>
 #include "graph.h"
 
-Graph *get_Graph(const int node_sum) {
+Graph *get_Graph(const int length) {
     int i, j, edge_num_of_node;
     Graph_Edge *now;
     Graph *graph = (Graph *) malloc(sizeof(Graph));
-    graph->size = node_sum;
-    graph->node = (Node *) malloc(node_sum * sizeof(Node));
+    graph->size = length;
+    graph->node = (Node *) malloc(length * sizeof(Node));
     for (i = 0; i < graph->size; ++i) {
         graph->node[i].name = (char *) malloc(NAME_LENGTH * sizeof(char));
         graph->node[i].first = (Graph_Edge *) malloc(sizeof(Graph_Edge));

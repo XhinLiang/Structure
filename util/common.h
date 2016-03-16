@@ -7,6 +7,6 @@
 
 #define EMPTY -1
 
-
+void swap(int *a, int *b);
 
 #endif //STRUCTURE_COMMEN_H
