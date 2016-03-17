@@ -11,7 +11,7 @@ Queue *bfs(const Graph *graph, const int origin) {
     Queue *find = get_Queue();
     Queue *handle = get_Queue();
     visit[temp] = FIND;
-    queue_enqueue(find, temp);
+    queue_enqueue_int(find, temp);
     while (temp != EMPTY) {
         edge = graph->node[temp].first;
         while (edge) {
@@ -20,11 +20,11 @@ Queue *bfs(const Graph *graph, const int origin) {
                 continue;
             }
             visit[edge->adj] = FIND;
-            queue_enqueue(handle, edge->adj);
-            queue_enqueue(find, edge->adj);
+            queue_enqueue_int(handle, edge->adj);
+            queue_enqueue_int(find, edge->adj);
             edge = edge->next;
         }
-        temp = queue_dequeue(handle);
+        temp = queue_dequeue_int(handle);
     }
     free(handle);
     free(visit);

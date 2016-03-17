@@ -10,10 +10,10 @@
 
 void test_dfs(const Graph *graph) {
     Queue *queue = bfs(graph, 0);
-    int temp = queue_dequeue(queue);
+    int temp = queue_dequeue_int(queue);
     while (temp != EMPTY) {
         printf("%s ", graph->node[temp]);
-        temp = queue_dequeue(queue);
+        temp = queue_dequeue_int(queue);
     }
     free(queue);
 }

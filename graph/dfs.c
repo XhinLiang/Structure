@@ -8,7 +8,7 @@
 void dfs_exec(const Graph *graph, const int origin, Queue *queue, int *find) {
     // 标记找到的节点
     find[origin] = FIND;
-    queue_enqueue(queue, origin);
+    queue_enqueue_int(queue, origin);
     Graph_Edge *temp = graph->node[origin].first;
     while (temp) {
         if (find[temp->adj] == NOT_FIND) {

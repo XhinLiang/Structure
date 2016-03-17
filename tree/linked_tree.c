@@ -4,7 +4,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include "linked_tree.h"
 #include "../util/queue.h"
 #include "../util/common.h"
@@ -18,6 +17,7 @@ Linked_Tree *new_node() {
     node->name = get_name_string();
     node->left = NULL;
     node->right = NULL;
+    return node;
 }
 
 Linked_Tree *get_Linked_Tree() {

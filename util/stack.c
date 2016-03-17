@@ -12,11 +12,11 @@ Stack *get_Stack() {
 }
 
 void *stack_pop(Stack *stack) {
-    void *result;
+    void *result = NULL;
     Stack_node *now = stack->node;
     Stack_node *forward = now;
     if (!now)
-        return EMPTY;
+        return NULL;
     while (now->next) {
         forward = now;
         now = now->next;
@@ -43,4 +43,15 @@ void stack_push(Stack *stack, void *data) {
         now = now->next;
     }
     now->next = push_node;
+}
+
+int stack_pop_int(Stack *stack) {
+    int *result = (int *) stack_pop(stack);
+    return result ? *result : EMPTY;
+}
+
+void stack_push_int(Stack *stack, int data) {
+    int *temp = (int *) malloc(sizeof(int));
+    *temp = data;
+    stack_push(stack, temp);
 }

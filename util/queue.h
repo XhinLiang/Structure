@@ -23,4 +23,9 @@ void *queue_dequeue(Queue *queue);
 
 void queue_enqueue(Queue *queue, void *data);
 
+
+void queue_enqueue_int(Queue *queue, int data);
+
+int queue_dequeue_int(Queue *queue);
+
 #endif //GRAPH_QUEUE_H

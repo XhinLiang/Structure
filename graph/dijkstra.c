@@ -104,17 +104,17 @@ void print_min_path(const Result *result, const Graph *graph) {
     Stack *stack = get_Stack();
     for (i = 0; i < graph->size; ++i) {
         if (i != result->original)
-            stack_push(stack, i);
+            stack_push_int(stack, i);
         temp = result->min_path[i];
-        stack_push(stack, temp);
+        stack_push_int(stack, temp);
         while (temp != result->original) {
             temp = result->min_path[temp];
-            stack_push(stack, temp);
+            stack_push_int(stack, temp);
         }
-        temp = stack_pop(stack);
+        temp = stack_pop_int(stack);
         while (temp != EMPTY) {
             printf("%s ", graph->node[temp].name);
-            temp = stack_pop(stack);
+            temp = stack_pop_int(stack);
         }
         printf("\n");
     }

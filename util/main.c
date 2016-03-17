@@ -38,22 +38,21 @@ void stack_queue() {
         temp = (int *) malloc(sizeof(int));
         *temp = i;
         stack_push(stack, temp);
-        queue_enqueue(queue, temp);
-
+        queue_enqueue_int(queue, i);
     }
 
     temp = (int *) stack_pop(stack);
-    while (temp != EMPTY) {
+    while (temp) {
         printf("%d ", *temp);
         temp = (int *) stack_pop(stack);
     }
     free(stack);
     printf("\n");
 
-    temp = (int *) queue_dequeue(queue);
-    while (temp != EMPTY) {
-        printf("%d ", *temp);
-        temp = (int *) queue_dequeue(queue);
+    i = queue_dequeue_int(queue);
+    while (i != EMPTY) {
+        printf("%d ", i);
+        i = queue_dequeue_int(queue);
     }
     free(queue);
     printf("\n");

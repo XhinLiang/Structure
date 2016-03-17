@@ -23,4 +23,8 @@ void *stack_pop(Stack *stack);
 
 void stack_push(Stack *stack, void *data);
 
+int stack_pop_int(Stack *stack);
+
+void stack_push_int(Stack *stack, int data);
+
 #endif //GRAPH_STACK_H
