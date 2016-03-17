@@ -28,6 +28,10 @@ Basic Data Structures and Algorithm in **PURE C**.
 - [Queue](https://github.com/XhinLiang/Structure/blob/master/util/queue.c)
 - [Stack](https://github.com/XhinLiang/Structure/blob/master/util/Stack.c)
 
+#### Tree
+- [Linked Binary Tree](https://github.com/XhinLiang/Structure/blob/master/tree/linked_tree.c)
+- [Array Binary Tree](https://github.com/XhinLiang/Structure/blob/master/tree/array_tree.c)
+
 ### TODO
 - Floyd
 - Tree and more
