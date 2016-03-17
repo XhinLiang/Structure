@@ -3,7 +3,7 @@
 //
 #include "heap_sort.h"
 #include "../util/common.h"
-#include "../tree/tree.h"
+#include "array_tree.h"
 
 
 /**

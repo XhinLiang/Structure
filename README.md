@@ -11,6 +11,8 @@ Basic Data Structures and Algorithm in **PURE C**.
 #### Graph
 - [Graph](https://github.com/XhinLiang/Structure/blob/master/graph/graph.c)
 - [Dijkstra](https://github.com/XhinLiang/Structure/blob/master/graph/dijkstra.c)
+- [DFS](https://github.com/XhinLiang/Structure/blob/master/graph/dfs.c)
+- [BFS](https://github.com/XhinLiang/Structure/blob/master/graph/bfs.c)
 
 #### Sort
 - [Heap](https://github.com/XhinLiang/Structure/blob/master/sort/heap_sort.c)

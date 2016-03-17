@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "heap.h"
 #include "common.h"
-#include "../tree/tree.h"
+#include "../tree/array_tree.h"
 
 /**
  * 获得一个最大长度为 max_length 的二叉堆，未指定最大或者最小

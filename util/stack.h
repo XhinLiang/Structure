@@ -8,9 +8,8 @@
 #include <stdlib.h>
 
 
-
 typedef struct Stack_node {
-    int data;
+    void *data;
     struct Stack_node *next;
 } Stack_node;
 
@@ -20,8 +19,8 @@ typedef struct {
 
 Stack *get_Stack();
 
-int stack_pop(Stack *stack);
+void *stack_pop(Stack *stack);
 
-void stack_push(Stack *stack, int data);
+void stack_push(Stack *stack, void *data);
 
 #endif //GRAPH_STACK_H

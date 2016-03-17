@@ -5,8 +5,12 @@
 #ifndef STRUCTURE_COMMON_H
 #define STRUCTURE_COMMON_H
 
-#define EMPTY -1
+#define EMPTY NULL
 
 void swap(int *a, int *b);
+
+int max(int a, int b);
+
+void str_copy(char *source, char *target) ;
 
 #endif //STRUCTURE_COMMEN_H

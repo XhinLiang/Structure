@@ -10,14 +10,20 @@ set(GRAPH_FILES array/array.c array/array.h
 
 set(UTIL_FILES util/stack.c util/stack.h util/common.h
         util/queue.c util/queue.h util/main.c util/heap.h util/heap.c util/common.c
-        tree/tree.c tree/tree.h)
+        tree/array_tree.c tree/array_tree.h)
 
 set(ARRAY_FILES array/array.h array/array.c array/kmp.c array/kmp.h array/main.c)
 
 set(SORT_FILES sort/main.c sort/quick_sort.h sort/quick_sort.c sort/merge_sort.h
         sort/merge_sort.c sort/insert_sort.h sort/insert_sort.c sort/select_sort.c sort/select_sort.h
         sort/shell_sort.c sort/shell_sort.h sort/heap_sort.h sort/heap_sort.c
-        util/common.c util/common.h tree/tree.c tree/tree.h)
+        util/common.c util/common.h tree/array_tree.c tree/array_tree.h)
+
+
+set(TREE_FILES util/common.h util/common.c util/queue.c util/stack.c
+        tree/array_tree.c tree/array_tree.h tree/linked_tree.c tree/linked_tree.h
+        tree/main.c)
+
 
 add_executable(Graph ${GRAPH_FILES})
 
@@ -26,3 +32,5 @@ add_executable(Sort ${SORT_FILES})
 add_executable(Util ${UTIL_FILES})
 
 add_executable(Array ${ARRAY_FILES})
+
+add_executable(Tree ${TREE_FILES})

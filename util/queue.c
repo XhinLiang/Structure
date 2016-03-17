@@ -8,10 +8,11 @@
 Queue *get_Queue() {
     Queue *queue = (Queue *) malloc(sizeof(Queue));
     queue->node = NULL;
+    return queue;
 };
 
-int queue_dequeue(Queue *queue) {
-    int result;
+void *queue_dequeue(Queue *queue) {
+    void *result;
     if (!queue->node)
         return EMPTY;
     result = queue->node->data;
@@ -21,7 +22,7 @@ int queue_dequeue(Queue *queue) {
     return result;
 };
 
-void queue_enqueue(Queue *queue, int data) {
+void queue_enqueue(Queue *queue, void *data) {
     Queue_node *en_node = (Queue_node *) malloc(sizeof(Queue_node));
     en_node->data = data;
     en_node->next = NULL;

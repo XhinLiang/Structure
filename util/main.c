@@ -12,7 +12,7 @@ void stack_queue();
 void heap();
 
 int main() {
-    heap();
+    stack_queue();
     return 0;
 }
 
@@ -31,26 +31,29 @@ void heap() {
 
 void stack_queue() {
     int i;
+    int *temp;
     Stack *stack = get_Stack();
     Queue *queue = get_Queue();
     for (i = 0; i < 10; ++i) {
-        stack_push(stack, i);
-        queue_enqueue(queue, i);
+        temp = (int *) malloc(sizeof(int));
+        *temp = i;
+        stack_push(stack, temp);
+        queue_enqueue(queue, temp);
 
     }
 
-    i = stack_pop(stack);
-    while (i != EMPTY) {
-        printf("%d ", i);
-        i = stack_pop(stack);
+    temp = (int *) stack_pop(stack);
+    while (temp != EMPTY) {
+        printf("%d ", *temp);
+        temp = (int *) stack_pop(stack);
     }
     free(stack);
     printf("\n");
 
-    i = queue_dequeue(queue);
-    while (i != EMPTY) {
-        printf("%d ", i);
-        i = queue_dequeue(queue);
+    temp = (int *) queue_dequeue(queue);
+    while (temp != EMPTY) {
+        printf("%d ", *temp);
+        temp = (int *) queue_dequeue(queue);
     }
     free(queue);
     printf("\n");

@@ -9,7 +9,7 @@
 
 
 typedef struct Queue_node {
-    int data;
+    void *data;
     struct Queue_node *next;
 } Queue_node;
 
@@ -19,8 +19,8 @@ typedef struct {
 
 Queue *get_Queue();
 
-int queue_dequeue(Queue *queue);
+void *queue_dequeue(Queue *queue);
 
-void queue_enqueue(Queue *queue, int data);
+void queue_enqueue(Queue *queue, void *data);
 
 #endif //GRAPH_QUEUE_H
