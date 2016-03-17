@@ -6,7 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c11")
 set(GRAPH_FILES array/array.c array/array.h
         graph/graph.c graph/graph.h graph/dijkstra.c graph/dijkstra.h graph/main.c
         util/stack.c util/stack.h util/common.h util/queue.h util/queue.c
-        graph/main.c array/kmp.h graph/dfs.h graph/dfs.c)
+        graph/main.c array/kmp.h graph/dfs.h graph/dfs.c graph/bfs.c graph/bfs.h)
 
 set(UTIL_FILES util/stack.c util/stack.h util/common.h
         util/queue.c util/queue.h util/main.c util/heap.h util/heap.c util/common.c

@@ -5,12 +5,11 @@
 #include <stdlib.h>
 #include "dijkstra.h"
 #include "../util/queue.h"
-#include "dfs.h"
 #include "../util/common.h"
-#include "graph.h"
+#include "bfs.h"
 
 void test_dfs(const Graph *graph) {
-    Queue *queue = dfs(graph, 0);
+    Queue *queue = bfs(graph, 0);
     int temp = queue_dequeue(queue);
     while (temp != EMPTY) {
         printf("%s ", graph->node[temp]);

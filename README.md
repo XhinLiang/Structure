@@ -34,7 +34,7 @@ Basic Data Structures and Algorithm in **PURE C**.
 - More and more
 
 ### Build
-*This Project is base on CMake 2.8, you have to install CMake first*
+**This Project is base on CMake 2.8, you have to install CMake first**
 
 ``` bash
 cmake .

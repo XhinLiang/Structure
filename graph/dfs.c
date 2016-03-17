@@ -2,7 +2,6 @@
 // Created by xhinliang on 16-3-16.
 //
 #include <stdlib.h>
-#include <string.h>
 #include "graph.h"
 #include "dfs.h"
 
@@ -21,9 +20,8 @@ void dfs_exec(const Graph *graph, const int origin, Queue *queue, int *find) {
 
 Queue *dfs(const Graph *graph, const int origin) {
     Queue *queue = get_Queue();
-    int *find = (int *) malloc(graph->size * sizeof(int));
-    memset(find, NOT_FIND, (unsigned long) graph->size);
-    dfs_exec(graph, origin, queue, find);
-    free(find);
+    int *visit = get_visit_array(graph);
+    dfs_exec(graph, origin, queue, visit);
+    free(visit);
     return queue;
 }

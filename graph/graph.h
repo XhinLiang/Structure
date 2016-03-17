@@ -24,4 +24,6 @@ typedef struct {
 
 Graph *get_Graph(const int length);
 
+int *get_visit_array(const Graph *graph);
+
 #endif

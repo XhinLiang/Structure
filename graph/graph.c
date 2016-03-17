@@ -3,7 +3,14 @@
  **/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "graph.h"
+
+int *get_visit_array(const Graph *graph) {
+    int *visit = (int *) malloc(graph->size * sizeof(int));
+    memset(visit, NOT_FIND, (unsigned long) graph->size);
+    return visit;
+}
 
 Graph *get_Graph(const int length) {
     int i, j, edge_num_of_node;
