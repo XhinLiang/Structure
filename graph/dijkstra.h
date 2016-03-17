@@ -8,12 +8,12 @@ typedef struct {
     int original;
     int *min_weight;
     int *min_path;
-} Result;
+} Dijkstra_Result;
 
-void print_min_weight(const Result *result, const Graph *graph);
+void print_min_weight(const Dijkstra_Result *result, const Graph *graph);
 
-void print_min_path(const Result *result, const Graph *graph);
+void print_min_path(const Dijkstra_Result *result, const Graph *graph);
 
-Result *dijkstra(const Graph *graph, const int original);
+Dijkstra_Result *dijkstra(const Graph *graph, const int original);
 
 #endif

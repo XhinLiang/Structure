@@ -8,7 +8,7 @@
 #include "../util/common.h"
 
 
-Result *dijkstra(const Graph *graph, const int original) {
+Dijkstra_Result *dijkstra(const Graph *graph, const int original) {
     const int MAX = 0xfffffff;
     const int NOT_FOUND = -1;
     const int FOUND = 1;
@@ -82,8 +82,8 @@ Result *dijkstra(const Graph *graph, const int original) {
             free(min_weight[i]);
     }
 
-    Result *result;
-    result = (Result *) malloc(sizeof(Result));
+    Dijkstra_Result *result;
+    result = (Dijkstra_Result *) malloc(sizeof(Dijkstra_Result));
     result->original = original;
     result->min_path = min_path;
     result->min_weight = min_weight[original];
@@ -92,14 +92,14 @@ Result *dijkstra(const Graph *graph, const int original) {
 }
 
 
-void print_min_weight(const Result *result, const Graph *graph) {
+void print_min_weight(const Dijkstra_Result *result, const Graph *graph) {
     int i;
     for (i = 0; i < result->size; ++i) {
         printf("%s %s %d \n", graph->node[result->original].name, graph->node[i].name, result->min_weight[i]);
     }
 }
 
-void print_min_path(const Result *result, const Graph *graph) {
+void print_min_path(const Dijkstra_Result *result, const Graph *graph) {
     int i, temp;
     Stack *stack = get_Stack();
     for (i = 0; i < graph->size; ++i) {

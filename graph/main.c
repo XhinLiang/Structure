@@ -32,7 +32,7 @@ int main() {
 }
 
 void test_dijkstra(const Graph *graph) {
-    Result *result;
+    Dijkstra_Result *result;
     result = dijkstra(graph, 0);
     print_min_weight(result, graph);
     print_min_path(result, graph);
