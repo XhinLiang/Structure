@@ -10,7 +10,7 @@ Graph *get_Graph(const int length) {
     Graph_Edge *now;
     Graph *graph = (Graph *) malloc(sizeof(Graph));
     graph->size = length;
-    graph->node = (Node *) malloc(length * sizeof(Node));
+    graph->node = (Graph_Node *) malloc(length * sizeof(Graph_Node));
     for (i = 0; i < graph->size; ++i) {
         graph->node[i].name = (char *) malloc(NAME_LENGTH * sizeof(char));
         graph->node[i].first = (Graph_Edge *) malloc(sizeof(Graph_Edge));

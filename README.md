@@ -20,7 +20,7 @@ Basic Data Structures and Algorithm in **PURE C**.
 - [Select](https://github.com/XhinLiang/Structure/blob/master/sort/select_sort.c)
 - [Shell](https://github.com/XhinLiang/Structure/blob/master/sort/shell_sort.c)
 
-#### util
+#### Util
 - [Common](https://github.com/XhinLiang/Structure/blob/master/util/common.c)
 - [Heap](https://github.com/XhinLiang/Structure/blob/master/util/heap.c)
 - [Queue](https://github.com/XhinLiang/Structure/blob/master/util/queue.c)
@@ -37,7 +37,6 @@ Basic Data Structures and Algorithm in **PURE C**.
 *This Project is base on CMake 2.8, you have to install CMake first*
 
 ``` bash
-mkdir exec
 cmake .
 make
 ```
