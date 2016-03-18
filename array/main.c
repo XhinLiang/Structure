@@ -38,8 +38,9 @@ int compare(const void *a, const int index, const void *b) {
 }
 
 int main() {
+    int t = 34;
     int array[] = {1, 4, 5, 6, 8, 10, 34, 43};
-    int temp = binary_search(array, 8, array + 6, compare);
+    int temp = binary_search(array, 8, &t, compare);
     printf("%d", temp);
     return 0;
 }
