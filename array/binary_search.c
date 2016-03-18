@@ -4,21 +4,28 @@
 
 #include "binary_search.h"
 
-int binary_search_exec(const void *source, const int start, const int end, const void *des,
+int binary_search_exec(const void *source, int start, int end, const void *des,
                        int (*compare)(const void *, const int, const void *)) {
-    int length = end - start + 1;
-    int half = length / 2;
-    int compare_result = compare(source, start + half, des);
-    if (compare_result == EQUAL)
-        return start + half;
-    if (length == 1)
-        return NOT_FIND;
-    if (length == 2 && compare(source, start, des) == EQUAL)
-        return start;
-    if (compare_result == SMALL)
-        return binary_search_exec(source, start, start + half, des, compare);
-    return binary_search_exec(source, start + half + 1, end, des, compare);
+    int length, half, compare_result;
+    while (1) {
+        length = end - start + 1;
+        half = length / 2;
+        compare_result = compare(source, start + half, des);
+        if (compare_result == EQUAL)
+            return start + half;
+        if (length == 1)
+            return NOT_FIND;
+        if (length == 2 && compare(source, start, des) == EQUAL)
+            return start;
+        if (compare_result == SMALL) {
+            end = start + half;
+            continue;
+        }
+        if (compare_result == LARGE)
+            start += half + 1;
+    }
 }
+
 
 int binary_search(const void *source, const int length, const void *des,
                   int (*compare)(const void *, const int, const void *)) {
