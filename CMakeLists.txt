@@ -6,7 +6,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c11")
 set(GRAPH_FILES array/array.c array/array.h
         graph/graph.c graph/graph.h graph/dijkstra.c graph/dijkstra.h graph/main.c
         util/stack.c util/stack.h util/common.h util/queue.h util/queue.c
-        graph/main.c array/kmp.h graph/dfs.h graph/dfs.c graph/bfs.c graph/bfs.h)
+        graph/main.c array/kmp.h graph/dfs.h graph/dfs.c graph/bfs.c
+        graph/bfs.h graph/floyd.h graph/floyd.c)
 
 set(UTIL_FILES util/stack.c util/stack.h util/common.h
         util/queue.c util/queue.h util/main.c util/heap.h util/heap.c util/common.c
@@ -21,7 +22,7 @@ set(SORT_FILES sort/main.c sort/quick_sort.h sort/quick_sort.c sort/merge_sort.h
 
 
 set(TREE_FILES util/common.h util/common.c util/queue.c util/stack.c
-        tree/array_tree.c tree/array_tree.h tree/linked_tree.c tree/linked_tree.h
+        tree/array_tree.c tree/array_tree.h tree/tree.c tree/tree.h
         tree/main.c)
 
 
@@ -34,3 +35,5 @@ add_executable(Util ${UTIL_FILES})
 add_executable(Array ${ARRAY_FILES})
 
 add_executable(Tree ${TREE_FILES})
+
+add_executable(One_zero_pack algorithm/one_zero_pack.c util/common.c util/common.h)

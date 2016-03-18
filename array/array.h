@@ -5,7 +5,7 @@
 #ifndef GRAPH_ARRAY_H
 #define GRAPH_ARRAY_H
 
-int **getIntArray(const int row, const int column);
+int **get_int_array(const int row, const int column);
 
 
 #endif //ARITHMETIC_LIANGLIB_H

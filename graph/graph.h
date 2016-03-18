@@ -4,7 +4,8 @@
 #define NAME_LENGTH 20
 
 #define FIND 1
-#define NOT_FIND 0
+#define NOT_FIND -1
+#define MAX 0xfffffff
 
 typedef struct Graph_Edge {
     int weight;

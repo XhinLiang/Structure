@@ -4,6 +4,10 @@
 Basic Data Structures and Algorithm in **PURE C**.
 
 ### Finished
+
+#### Algorithm
+- [01 Backpack](https://github.com/XhinLiang/Structure/blob/master/algorithm/one_zero_pack.c)
+
 #### Array
 - [Array](https://github.com/XhinLiang/Structure/blob/master/array/array.c)
 - [KMP](https://github.com/XhinLiang/Structure/blob/master/array/kmp.c)
@@ -11,6 +15,7 @@ Basic Data Structures and Algorithm in **PURE C**.
 #### Graph
 - [Graph](https://github.com/XhinLiang/Structure/blob/master/graph/graph.c)
 - [Dijkstra](https://github.com/XhinLiang/Structure/blob/master/graph/dijkstra.c)
+- [Floyd](https://github.com/XhinLiang/Structure/blob/master/graph/floyd.c)
 - [DFS](https://github.com/XhinLiang/Structure/blob/master/graph/dfs.c)
 - [BFS](https://github.com/XhinLiang/Structure/blob/master/graph/bfs.c)
 

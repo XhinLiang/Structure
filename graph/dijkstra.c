@@ -9,17 +9,13 @@
 
 
 Dijkstra_Result *dijkstra(const Graph *graph, const int original) {
-    const int MAX = 0xfffffff;
-    const int NOT_FOUND = -1;
-    const int FOUND = 1;
-
     // 这点的最短路径前趋
     int *min_path;
     // 点到点的距离
     int **min_weight;
 
-    min_weight = getIntArray(graph->size, graph->size);
-    min_path = (int *) malloc(graph->size * sizeof(int));
+    min_weight = get_int_array(graph->size, graph->size);
+    min_path = get_visit_array(graph);
 
     int i, j;
     for (i = 0; i < graph->size; ++i) {
@@ -46,30 +42,30 @@ Dijkstra_Result *dijkstra(const Graph *graph, const int original) {
     // find 数组记录已经找到最短路径的点
     int *find;
     find = (int *) malloc(graph->size * sizeof(int));
-    memset(find, NOT_FOUND, (unsigned long) graph->size);
+    memset(find, FIND, (unsigned long) graph->size);
     // 首先自己肯定已经找到了最短路径
-    find[original] = FOUND;
+    find[original] = NOT_FIND;
 
 
     int min_index, min;
     for (j = 1; j < graph->size; ++j) {
         // 找出原点中最短的一条边
-        min_index = NOT_FOUND;
+        min_index = FIND;
         min = MAX;
         for (i = 0; i < graph->size; ++i) {
-            if (find[i] != FOUND && min_weight[original][i] < min) {
+            if (find[i] != FIND && min_weight[original][i] < min) {
                 min = min_weight[original][i];
                 min_index = i;
             }
         }
         // 如果这个点已经被标记过，那么证明所有的点都处理过
-        if (find[min_index] == FOUND)
+        if (find[min_index] == FIND)
             break;
         // 标记这个点
-        find[min_index] = FOUND;
+        find[min_index] = FIND;
         // 以这个点为中间点，更新最短路程和最短路径前趋
         for (i = 0; i < graph->size; ++i) {
-            if (find[i] == FOUND)
+            if (find[i] == FIND)
                 continue;
             if (min_weight[original][min_index] + min_weight[min_index][i] < min_weight[original][i]) {
                 min_weight[original][i] = min_weight[original][min_index] + min_weight[min_index][i];
@@ -92,14 +88,14 @@ Dijkstra_Result *dijkstra(const Graph *graph, const int original) {
 }
 
 
-void print_min_weight(const Dijkstra_Result *result, const Graph *graph) {
+void print_dijkstra_min_weight(const Dijkstra_Result *result, const Graph *graph) {
     int i;
     for (i = 0; i < result->size; ++i) {
         printf("%s %s %d \n", graph->node[result->original].name, graph->node[i].name, result->min_weight[i]);
     }
 }
 
-void print_min_path(const Dijkstra_Result *result, const Graph *graph) {
+void print_dijkstra_min_path(const Dijkstra_Result *result, const Graph *graph) {
     int i, temp;
     Stack *stack = get_Stack();
     for (i = 0; i < graph->size; ++i) {
