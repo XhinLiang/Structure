@@ -1,6 +1,7 @@
 //
 // Created by xhinliang on 16-3-16.
 //
+#include <string.h>
 #include "common.h"
 
 void swap(int *a, int *b) {

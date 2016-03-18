@@ -7,6 +7,10 @@
 
 #define EMPTY -0xffff
 
+#define EQUAL 0
+#define LARGE 1
+#define SMALL -1
+
 void swap(int *a, int *b);
 
 int max(int a, int b);

@@ -13,7 +13,9 @@ set(UTIL_FILES util/stack.c util/stack.h util/common.h
         util/queue.c util/queue.h util/main.c util/heap.h util/heap.c util/common.c
         tree/array_tree.c tree/array_tree.h)
 
-set(ARRAY_FILES array/array.h array/array.c array/kmp.c array/kmp.h array/main.c)
+set(ARRAY_FILES array/array.h array/array.c array/kmp.c array/kmp.h array/main.c
+        graph/graph.h graph/graph.c util/common.c util/common.h
+        array/binary_search.c array/binary_search.h)
 
 set(SORT_FILES sort/main.c sort/quick_sort.h sort/quick_sort.c sort/merge_sort.h
         sort/merge_sort.c sort/insert_sort.h sort/insert_sort.c sort/select_sort.c sort/select_sort.h

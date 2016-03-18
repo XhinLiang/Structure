@@ -11,6 +11,7 @@ Basic Data Structures and Algorithm in **PURE C**.
 #### Array
 - [Array](https://github.com/XhinLiang/Structure/blob/master/array/array.c)
 - [KMP](https://github.com/XhinLiang/Structure/blob/master/array/kmp.c)
+- [Binary Search](https://github.com/XhinLiang/Structure/blob/master/array/binary_search.c)
 
 #### Graph
 - [Graph](https://github.com/XhinLiang/Structure/blob/master/graph/graph.c)
