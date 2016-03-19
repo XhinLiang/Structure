@@ -22,3 +22,9 @@ void str_copy(char *source, char *target) {
         target[i] = source[i];
     }
 }
+
+void int_array_copy(const int *source, int *target, const int length) {
+    int i;
+    for (i = 0; i < length; ++i)
+        target[i] = source[i];
+}

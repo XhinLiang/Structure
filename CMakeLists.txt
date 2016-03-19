@@ -39,3 +39,5 @@ add_executable(Array ${ARRAY_FILES})
 add_executable(Tree ${TREE_FILES})
 
 add_executable(One_zero_pack algorithm/one_zero_pack.c util/common.c util/common.h)
+
+add_executable(Prime_sieve algorithm/prime_sieve.c util/common.c util/common.h)

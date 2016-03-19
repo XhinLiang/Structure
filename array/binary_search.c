@@ -1,7 +1,6 @@
 //
 // Created by xhinliang on 16-3-18.
 //
-
 #include "binary_search.h"
 
 int binary_search_exec(const void *source, int start, int end, const void *des,
