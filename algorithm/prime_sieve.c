@@ -32,6 +32,7 @@ Prime_Result *prime_Euler(const int length) {
         free(not_prime);
         free(prime);
         prime = not_prime = NULL;
+        return NULL;
     }
 
     result = (Prime_Result *) malloc(sizeof(Prime_Result));
@@ -108,6 +109,9 @@ int main() {
     for (i = 0; i < result->length; ++i)
         printf("%d ", result->data[i]);
     free(result);
+
+    // 释放内存
+    prime_Euler(0);
 
     return 0;
 }
