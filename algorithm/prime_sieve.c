@@ -27,6 +27,13 @@ Prime_Result *prime_Euler(const int length) {
     // 已经求出过的最大 length
     static int max_length = 0;
 
+    if (!length) {
+        // 输入长度为零的时候，释放内存
+        free(not_prime);
+        free(prime);
+        prime = not_prime = NULL;
+    }
+
     result = (Prime_Result *) malloc(sizeof(Prime_Result));
     result->data = (int *) malloc(length * sizeof(int));
     // 如果需要的长度正好是求出来的最大长度，直接赋值返回即可
@@ -38,12 +45,21 @@ Prime_Result *prime_Euler(const int length) {
     // 如果需要的长度大于已经求出过的，需要重新分配内存，重新计算
     if (length > max_length) {
         max_length = length;
-        // TODO 重新分配内存失败
-//        not_prime = (int *) realloc(not_prime, length * sizeof(int));
-//        prime = (int *) realloc(prime, length * sizeof(int));
-        // TODO 这样不会内存泄露吗？？？？？
+
+        // TODO 这个 free 会出错
+        // free(): invalid pointer:
+        if (prime) {
+            free(prime);
+            prime = NULL;
+        }
+        if (not_prime) {
+            free(not_prime);
+            not_prime = NULL;
+        }
+
         not_prime = (int *) malloc(length * sizeof(int));
         prime = (int *) malloc(length * sizeof(int));
+
 
         // 初始化为每个都不不是素数（双重否定句）
         memset(not_prime, 0, sizeof(not_prime));
