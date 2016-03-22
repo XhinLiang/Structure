@@ -13,6 +13,9 @@ typedef struct {
 } Prime_Result;
 
 
+int *not_prime = NULL;
+int *prime = NULL;
+
 /**
  * 欧拉筛法求素数
  */
@@ -21,8 +24,6 @@ Prime_Result *prime_Euler(const int length) {
     Prime_Result *result = NULL;
     // 假设所有的数都是素数
     // 这里需要进行预处理，所以需要 local static 变量
-    static int *not_prime = NULL;
-    static int *prime = NULL;
     static int prime_sum = -1;
     // 已经求出过的最大 length
     static int max_length = 0;
