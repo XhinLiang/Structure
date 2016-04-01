@@ -15,7 +15,7 @@ set(UTIL_FILES util/stack.c util/stack.h util/common.h
 
 set(ARRAY_FILES array/array.h array/array.c array/kmp.c array/kmp.h array/main.c
         graph/graph.h graph/graph.c util/common.c util/common.h
-        array/binary_search.c array/binary_search.h leetcode/338_Counting_Bits.c)
+        array/binary_search.c array/binary_search.h )
 
 set(SORT_FILES sort/main.c sort/quick_sort.h sort/quick_sort.c sort/merge_sort.h
         sort/merge_sort.c sort/insert_sort.h sort/insert_sort.c sort/select_sort.c sort/select_sort.h
@@ -42,4 +42,4 @@ add_executable(One_zero_pack algorithm/one_zero_pack.c util/common.c util/common
 
 add_executable(Prime_sieve algorithm/prime_sieve.c util/common.c util/common.h)
 
-add_executable(338_Counting_Bits leetcode/338_Counting_Bits.c)
+add_executable(Kth_number algorithm/kth_number.c)
