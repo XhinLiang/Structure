@@ -22,10 +22,9 @@ set(SORT_FILES sort/main.c sort/quick_sort.h sort/quick_sort.c sort/merge_sort.h
         sort/shell_sort.c sort/shell_sort.h sort/heap_sort.h sort/heap_sort.c
         util/common.c util/common.h tree/array_tree.c tree/array_tree.h)
 
-
 set(TREE_FILES util/common.h util/common.c util/queue.c util/stack.c
         tree/array_tree.c tree/array_tree.h tree/tree.c tree/tree.h
-        tree/main.c)
+        tree/main.c tree/binary_tree.c tree/binary_tree.h)
 
 
 add_executable(Graph ${GRAPH_FILES})
