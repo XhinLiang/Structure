@@ -1,7 +1,7 @@
 # Structure
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-Basic Data Structures and Algorithm in **PURE C**.
+Basic data structures and algorithm in **PURE C**.
 
 ### Finished
 
